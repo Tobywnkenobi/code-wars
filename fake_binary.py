@@ -21,14 +21,24 @@ Note: input will never be an empty string
 make_binary = [3,6,6,0,5,8,5,6,2,0,3,0,8,4,9,4,9,0,1,3,4,3,8,8,0,8,5]
 return_binary = []
 
-def fake_bin(x: str) -> str:
-    for i in make_binary:                       #O(n)
-        if int(i) >= 5:                         #O(n)
-            return_binary.append("1")           # O(n)
+
+def fake_bin(x: list) -> str:
+    for i in x:
+        if i >= 5:
+            return_binary.append("1")
         else:
-            return_binary.append("0")           #O(n) bc of the loop
-    return (return_binary)
+            return_binary.append("0")
+    return ''.join(return_binary)
+
+
+# def fake_bin(x: s) -> str:
+#     for i in make_binary:                       
+#         if int(i) >= 5:                         
+#             return_binary.append("1")           
+#         else:
+#             return_binary.append("0")          
+#     return (return_binary)
 
  
-result = fake_bin(return_binary)
-print(result)
+# result = fake_bin(return_binary)
+# print(result)
