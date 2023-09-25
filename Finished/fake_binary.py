@@ -17,18 +17,33 @@ Given a string of digits, you should replace any digit below 5 with '0' and any 
 
 Note: input will never be an empty string
 """
-#make_binary = [45385593107843568]
-make_binary = [3,6,6,0,5,8,5,6,2,0,3,0,8,4,9,4,9,0,1,3,4,3,8,8,0,8,5]
-return_binary = []
-
-
-def fake_bin(x: list) -> str:
-    for i in x:
-        if i >= 5:
-            return_binary.append("1")
+def fake_bin(x: str) -> str:
+    result = ""
+    for digit in x:
+        if int(digit) < 5:
+            result += "0"
         else:
-            return_binary.append("0")
-    return ''.join(return_binary)
+            result += "1"
+    return result
+
+
+
+
+
+
+
+# #make_binary = [45385593107843568]
+# make_binary = [3,6,6,0,5,8,5,6,2,0,3,0,8,4,9,4,9,0,1,3,4,3,8,8,0,8,5]
+# return_binary = []
+
+
+# def fake_bin(x: list) -> str:
+#     for i in x:
+#         if i >= 5:
+#             return_binary.append("1")
+#         else:
+#             return_binary.append("0")
+#     return ''.join(return_binary)
 
 
 # def fake_bin(x: s) -> str:
