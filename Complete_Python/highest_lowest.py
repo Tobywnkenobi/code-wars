@@ -21,4 +21,4 @@ def high_and_low(numbers):
 
     highest = str(max(num_list))
     lowest = str(min(num_list))
-    return numbers
+    return f'{highest} {lowest}'
